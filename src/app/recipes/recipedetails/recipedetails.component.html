@@ -1,0 +1,82 @@
+
+
+
+<article class="recipe-card">
+  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8b819e4ace071c6ce4840ff6f4fe36b06e3e8211ec196a9cc3a0093eb50faa8a?apiKey=67852738b89e47cf947e8299879a9266&&apiKey=67852738b89e47cf947e8299879a9266" alt="Thai Basil Tofu Stir Fry dish" class="recipe-image" />
+  <header class="recipe-header">
+    <h2 class="recipe-title">Thai Basil Tofu Stir <br /> Fry</h2>
+    <button aria-label="Bookmark recipe" class="bookmark-button">
+      <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/f3e167df16f797e970d709bdbd149327c817b3281f6e8c004d33cae362ff96da?apiKey=67852738b89e47cf947e8299879a9266&&apiKey=67852738b89e47cf947e8299879a9266" alt="" class="bookmark-icon" />
+    </button>
+  </header>
+  <div class="recipe-info">
+    <div class="time-container">
+      <span class="time-icon" aria-hidden="true"></span>
+      <span class="cook-time">30 minutes</span>
+    </div>
+    <span class="difficulty">Easy</span>
+  </div>
+  <footer class="recipe-footer">
+    <div class="rating-container">
+      <div class="rating">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8a8350b0710e6c35665540ab10ed318bc8e58f7e15ccd1b9c5b218846e41cb81?apiKey=67852738b89e47cf947e8299879a9266&&apiKey=67852738b89e47cf947e8299879a9266" alt="" class="star-icon" />
+        <span class="rating-value">255</span>
+      </div>
+      <div class="user-rating">
+        <span class="user-star-icon" aria-hidden="true"></span>
+        <span class="user-star-icon" aria-hidden="true"></span>
+      </div>
+      <button (click)="showdialog()" class="btnsignup">See Complete Recipe</button>
+      <button class="btnsignup">See Vendors</button>
+    </div>
+    <!-- <button aria-label="Share recipe" class="share-button"> -->
+      <!-- <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/313d2e947b892d7e1e92051ae82a605c7ab8322cb08e6794477316424932bcd4?apiKey=67852738b89e47cf947e8299879a9266&&apiKey=67852738b89e47cf947e8299879a9266" alt="" class="share-icon" />
+    </button> -->
+
+  </footer>
+</article>
+
+<p-dialog header="Recipe Details" [(visible)]="display" [modal]="true" [closable]="true" [style]="{width: '700px'}">
+  <div class="recipe-detail-card">
+    <div class="image-section">
+      <img src="path-to-recipe-image.jpg" alt="Recipe Image">
+    </div>
+    <div class="details-section">
+      <h1>{{ recipe.name }}</h1>
+      <p>{{ recipe.description }}</p>
+      <p><strong>Cook Time:</strong> {{ recipe.cookTime }} mins</p>
+      <p><strong>Difficulty:</strong> {{ recipe.difficulty }}</p>
+      <p><strong>Calories:</strong> {{ recipe.calories }} kcal</p>
+      
+      <div class="tags">
+        <p-chip *ngFor="let tag of recipe.tags" [label]="tag"></p-chip>
+      </div>
+  
+      <h2>Ingredients</h2>
+      <ul>
+        <li *ngFor="let ingredient of recipe.ingredients">
+          {{ ingredient }}
+        </li>
+      </ul>
+  
+      <h2>Directions</h2>
+      <ol>
+        <li *ngFor="let direction of recipe.directions">
+          {{ direction }}
+        </li>
+      </ol>
+  
+      <h2>Nutrition Information</h2>
+      <div class="nutrition-info">
+        <p><strong>Protein:</strong> {{ recipe.nutrition.protein }} g</p>
+        <p><strong>Fats:</strong> {{ recipe.nutrition.fats }} g</p>
+        <p><strong>Carbs:</strong> {{ recipe.nutrition.carbs }} g</p>
+      </div>
+  
+      <button pButton type="button" label="Add to Favorites" icon="pi pi-star"></button>
+    </div>
+  </div>
+</p-dialog>
+
+  
+<p-dialog header="Vendor Details" [(visible)]="displayvendor" [modal]="true" [closable]="true" [style]="{width: '700px'}"><h2>Nutrition Information</h2></p-dialog>

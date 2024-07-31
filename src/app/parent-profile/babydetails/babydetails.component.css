@@ -1,0 +1,36 @@
+.profile-section, .preferences-section {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  margin-bottom: 2rem;
+}
+
+.profile-field {
+  margin-bottom: 1rem;
+}
+
+.profile-input {
+  margin-bottom: 1rem;
+}
+
+.profile-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: #3d3c3c;
+}
+
+.profile-field input, .profile-field p-dropdown, .profile-field p-inplace, .profile-field p-multiSelect {
+  width: 100%;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.button-group p-button {
+  margin-right: 1rem;
+}

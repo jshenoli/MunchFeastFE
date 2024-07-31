@@ -1,0 +1,147 @@
+<div class="baby-cards-container">
+    <div class="profile-card" *ngFor="let baby of babies">
+      <img [src]="baby.profilePic || '/defaultProfilePic.png'" alt="Profile Image" class="profile-img"><br><br>
+      <b>{{ baby.babyName }}</b><br><br>
+      <div class="Details">
+        Age: {{ baby.babyAge }} &nbsp;&nbsp; Weight: {{ baby.babyWeight }}<br>
+        Last Updated: {{ baby.lastUpdated }}
+      </div><br>
+      <button pButton type="button" label="Keep me Uptodate" (click)="showModal(baby)" class="buttonorange"></button>
+      <br><button pButton type="button" label="Recommendations" class="buttonorange" (click)="showModal(baby)"></button>
+  </div>
+  
+  <p-dialog header="Edit Baby Details" [(visible)]="display" [modal]="true" [closable]="true" [dismissableMask]="true" width="600px">
+    <div class="form-container" *ngIf="selectedBaby">
+      <form>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="profilePic">Profile Picture:</label><br>
+            <img [src]="selectedBaby.profilePic || '/defaultProfilePic.png'" alt="Profile Image" class="form-img"><br>
+            <input type="file" id="profilePic" (change)="onFileChange($event)">
+          </div>
+  
+          <div class="form-group">
+            <label for="babyName">Baby Name:</label>
+            <input pInputText type="text" id="babyName" [(ngModel)]="selectedBaby.babyName" name="babyName">
+          </div>
+  
+          <div class="form-group">
+            <label for="babyAge">Age:</label>
+            <input pInputText type="number" id="babyAge" [(ngModel)]="selectedBaby.babyAge" name="babyAge">
+          </div>
+          <div class="form-row">
+            <div>
+            <div class="form-group">
+              <label for="babyWeight">Weight (kg):</label>
+              <input pInputText type="number" id="babyWeight" [(ngModel)]="selectedBaby.babyWeight" name="babyWeight">
+            </div>
+    
+            <div class="form-group">
+              <label for="babyHeight">Height (cm):</label>
+              <input pInputText type="number" id="babyHeight" [(ngModel)]="selectedBaby.babyHeight" name="babyHeight">
+            </div>
+            
+        </div>
+        </div>
+  
+      
+  
+          <div class="form-group">
+            <label>Active Status:</label><br>
+            <p-radioButton name="activeStatus" value="low" [(ngModel)]="selectedBaby.activeStatus" label="Low"></p-radioButton>
+            <p-radioButton name="activeStatus" value="average" [(ngModel)]="selectedBaby.activeStatus" label="Average"></p-radioButton>
+            <p-radioButton name="activeStatus" value="high" [(ngModel)]="selectedBaby.activeStatus" label="High"></p-radioButton>
+          </div>
+        </div>
+  
+        <p-fieldset legend="Baby Preferences" class="custom-fieldset">
+          <div class="form-group">
+            <label for="dietaryPreferences">Dietary Preferences:</label>
+            <p-chips [(ngModel)]="selectedBaby.dietaryPreferences" name="dietaryPreferences" ></p-chips>
+            <button pButton type="button"></button>
+          </div>
+  
+          <div class="form-group">
+            <label for="allergens">Allergens:</label>
+            <p-multiSelect [options]="ingredients" [(ngModel)]="selectedBaby.allergens" name="allergens" optionLabel="name" placeholder="Select Allergens"></p-multiSelect>
+          </div>
+  
+          <div class="form-group">
+            <label for="dislikes">Dislikes:</label>
+            <p-multiSelect [options]="ingredients" [(ngModel)]="selectedBaby.dislikes" name="dislikes" optionLabel="name" placeholder="Select Dislikes"></p-multiSelect>
+          </div>
+        </p-fieldset>
+  
+        <div class="form-group buttons">
+          <button pButton type="button" label="Save" (click)="save()" class="custom-button"></button>
+          <button pButton type="button" label="Cancel" class="ui-button-secondary custom-button" (click)="cancel()"></button>
+        </div>
+      </form>
+    </div>
+  </p-dialog>
+  <!-- <div class="baby-cards-container">
+    <div class="profile-card" *ngFor="let baby of babies"> 
+        <img  [src]="baby.profilePic" alt="Welcome Image" style="width: 100px; height: 100px; border-radius: 50%;"><br><br><b>{{ baby.babyName }}</b> <br> <br> <div class="Details">Age:{{ baby.babyAge }} &nbsp; &nbsp;  Weight:{{ baby.babyWeight }}<br>Last Updated:{{ baby.lastUpdated }} </div><br>
+        <button (click)="showModal(baby)">Recommendations</button>
+        <br><button>Keep uptodate</button></div></div>
+
+
+        <p-dialog header="Title" [visible]="display" [closable]="true" [dismissableMask]="true">
+            
+            <div class="form-container" *ngIf="selectedBaby">
+                <form>
+                    <p-fieldset legend="Baby Details" class="custom-fieldset">
+
+                    <div class="form-group">
+                        <label for="profilePic">Profile Picture:</label><br>
+                        <img [src]="selectedBaby.profilePic || '/defaultProfilePic.png'" alt="Profile Image" style="width: 100px; height: 100px; border-radius: 50%;"><br>
+                        <input type="file" id="profilePic" (change)="onFileChange($event)">
+
+                        <label for="babyName">Baby Name:</label>
+                        <input type="text" id="babyName"  [(ngModel)]="selectedBaby.babyName" name="babyName" >
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="babyAge">Age:</label>
+                        <input type="number" id="babyAge" [(ngModel)]="selectedBaby.babyAge" name="babyAge">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="babyWeight">Weight (kg):</label>
+                        <input type="number" id="babyWeight" [(ngModel)]="selectedBaby.babyWeight" name="babyWeight">
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="babyHeight">Height (cm):</label>
+                        <input type="number" id="babyHeight" [(ngModel)]="selectedBaby.babyHeight" name="babyHeight">
+                    </div>
+            
+                   
+                    </p-fieldset>
+                    <p-fieldset legend="Baby Preferences" class="custom-fieldset">
+
+            
+                    <div class="form-group">
+                        <label for="dietaryPreferences">Dietary Preferences:</label>
+                        <textarea id="dietaryPreferences"  [(ngModel)]="selectedBaby.dietaryPreferences" name="dietaryPreferences"></textarea>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="dislikes">Food Dislikes:</label>
+                        <textarea id="dislikes" [(ngModel)]="selectedBaby.dislikes" name="dislikes"></textarea>
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="allergens">Allergens:</label>
+                        <textarea id="allergens" [(ngModel)]="selectedBaby.allergens" name="allergens"></textarea>
+                    </div>
+                    </p-fieldset>
+            
+                    <div class="form-group">
+                        <button type="button" (click)="save()">Save</button>
+                        <button type="button" (click)="cancel()">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            
+        </p-dialog> -->

@@ -1,0 +1,108 @@
+/* General container and card styles */
+.baby-cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.profile-card {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  width: 225px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(197, 171, 194, 0.1);
+}
+
+.Details{
+  font-size: small;
+}
+
+.profile-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+/* Form container and fieldset styles */
+.form-container {
+  padding: 20px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  margin-bottom: 15px;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group p-chips,
+.form-group p-multiSelect {
+  width: 100%;
+}
+
+.form-img {
+  display: block;
+  margin-bottom: 10px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.custom-fieldset {
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+}
+
+.custom-fieldset legend {
+  font-size: 12px;
+  font-weight: bold;
+  padding: 0 10px;
+}
+
+/* Custom button styles */
+.custom-button {
+  margin-right: 10px;
+}
+
+.custom-button.ui-button {
+  background-color: #007bff;
+  border-color: #007bff;
+  color: #fff;
+}
+
+.custom-button.ui-button-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+  color: #fff;
+}
+
+/* Dialog styles */
+p-dialog {
+  width: 600px !important;
+}
+
+p-dialog .ui-dialog-content {
+  padding: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-end;
+}

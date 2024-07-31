@@ -1,0 +1,147 @@
+
+
+<div class="container">
+    <div class="logo">
+        <img src="/Logo1.png" alt="Welcome Image">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">MunchHome</a></li>
+         
+        </ul>
+    </nav>
+</div>
+
+
+<section id="home" class="welcome-section">
+
+<div class="welcome-container">
+    <div class="welcome-image">
+        <img src="/welcome.png" alt="Welcome Image">
+    </div>
+    
+    <div class="welcome-text">
+        
+        <router-outlet></router-outlet>
+
+        <h2>Welcome back! Please log in to continue</h2>
+       
+        <div class="welcome-text">
+     
+      
+            <form  class="login-form">
+                
+                <div class="input-container">
+               
+                <input type="text" [(ngModel)]="username" placeholder="" id="username" name="username" required>
+                <label for="username" class="placeholder">Username</label>
+            </div> <div class="input-container">
+                <input type="password" [(ngModel)]="password" placeholder="" id="password"  name="password"required>
+                <label for="username" class="placeholder">Passwords</label>
+            </div>
+               <div class="form-options">
+                   <label><input type="checkbox"> Remember Me</label>
+                   <a routerLink="/forgot-password">Forgot Password?</a>
+               </div>
+               <button type="submit" (click)="login()" class="btn">Sign In</button>
+            
+             
+           </form>
+           </div>
+       
+    </div>
+</div>
+</section>
+
+
+
+<footer>
+<div class="footer-container">
+    <div class="footer-info">
+        <p>Contact Information<br>Tel: +94 733310757</p>
+        <p>Legal Information<br><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+    </div>
+    <div class="footer-nav">
+        <a href="#home">MunchHome</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#tips">MunchTips</a>
+    </div>
+</div>
+</footer>  
+
+
+
+
+<!-- 
+
+
+<div class="container">
+    <div class="logo">
+        <img src="/HeaderLogo.png" alt="Welcome Image">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#home">MunchHome</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#signin" class="btn" routerLink="/login">Sign in</a></li>
+            <li><a href="#signup" class="btn" routerLink="/signup">Sign Up</a></li>
+        </ul>
+    </nav>
+</div>
+
+
+<section id="home" class="welcome-section">
+
+<div class="welcome-container">
+    <div class="welcome-image">
+        <img src="/welcome.png" alt="Welcome Image">
+    </div>
+    
+    <div class="welcome-text">
+        
+        <router-outlet></router-outlet>
+
+        <h2>Welcome back! Please log in to continue to your personalized dashboard</h2>
+       
+        <div class="welcome-text">
+     
+      
+            <form (submit)="login()" class="login-form">
+                
+                
+                <input type="text" placeholder="Enter Username" id="username" [(ngModel)]="username" name="username" required>
+               <input type="password" placeholder="Enter Password" id="password" [(ngModel)]="password" name="password"required>
+               <div class="form-options">
+                   <label><input type="checkbox"> Remember Me</label>
+                   <a href="#forgot-password">Forgot Password?</a>
+               </div>
+               <button type="submit" >Sign In</button>
+            
+             
+           </form>
+           </div>
+       
+    </div>
+</div>
+</section>
+
+
+
+<footer>
+<div class="footer-container">
+    <div class="footer-info">
+        <p>Contact Information<br>Tel: +94 733310757</p>
+        <p>Legal Information<br><a href="#privacy-policy">Privacy Policy</a> | <a href="#terms-of-service">Terms of Service</a></p>
+    </div>
+    <div class="footer-nav">
+        <a href="#home">MunchHome</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#tips">MunchTips</a>
+    </div>
+</div>
+</footer> 
+
+<router-outlet></router-outlet> -->

@@ -1,0 +1,257 @@
+
+
+baby profile
+<!-- <main class="app-content">
+  <section class="welcome-content">
+    <div class="profile-section">
+      <label for="profile-picture">Profile Picture:</label>
+      <input type="file" id="profile-picture" name="profile-picture" accept="image/*" class="profile-input">
+
+      <div class="profile-field">
+        <label for="baby-name">Baby Name:</label>
+        <p-inplace closable="closable">
+          <ng-template pTemplate="display">
+            <span>{{ user.babyName }}</span>
+          </ng-template>
+          <ng-template pTemplate="content">
+            <input pInputText id="baby-name" [(ngModel)]="user.babyName" />
+          </ng-template>
+        </p-inplace>
+      </div>
+
+      <div class="profile-field">
+        <label for="age">Age:</label>
+        <p-dropdown 
+          [options]="ageInMonths" 
+          [(ngModel)]="selectedAge" 
+          placeholder="Select Age" 
+          [editable]="true" 
+          optionLabel="age"
+          [style]="{'width':'150px'}">
+        </p-dropdown>
+      </div>
+
+      <div class="profile-field">
+        <label for="weight">Weight (kgs):</label>
+        <input type="number" id="weight" pInputText [(ngModel)]="user.weight" step="0.1" />
+      </div>
+
+      <div class="profile-field">
+        <label for="height">Height (cm):</label>
+        <input type="number" id="height" pInputText [(ngModel)]="user.height" />
+      </div>
+
+      <div class="profile-field">
+        <label for="active-level">Active Level:</label>
+        <p-radioButton name="activeLevel" value="Low" label="Low" [(ngModel)]="user.activeLevel"></p-radioButton>
+        <p-radioButton name="activeLevel" value="Moderate" label="Moderate" [(ngModel)]="user.activeLevel" checked="true"></p-radioButton>
+        <p-radioButton name="activeLevel" value="High" label="High" [(ngModel)]="user.activeLevel"></p-radioButton>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-1">
+    <div class="preferences-section">
+      <h2>Preferences</h2>
+      
+      <div class="profile-field">
+        <label for="dietary-preferences">Dietary Preferences:</label>
+        <p-multiSelect [options]="dietaryOptions" [(ngModel)]="selectedDietaryPreferences" placeholder="Select Preferences"></p-multiSelect>
+      </div>
+
+      <div class="profile-field">
+        <label for="allergen-preferences">Allergen Preferences:</label>
+        <p-multiSelect [options]="allergenOptions" [(ngModel)]="selectedAllergenPreferences" placeholder="Select Allergen Preferences"></p-multiSelect>
+      </div>
+
+      <div class="profile-field">
+        <label for="dislike-preferences">Dislike Preferences:</label>
+        <p-multiSelect [options]="dislikeOptions" [(ngModel)]="selectedDislikePreferences" placeholder="Select Dislike Preferences"></p-multiSelect>
+      </div>
+
+      <div class="button-group">
+        <p-button label="Save" [raised]="true" />
+        <p-button label="Cancel" [raised]="true" />
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="app-footer">
+  Footer Content
+</footer> -->
+
+
+
+
+
+
+
+
+<!-- <main class="app-content">
+  <section class="welcome-content"> 
+    <table><tr><td>
+      <label for="profile-picture">Profile Picture:</label>
+     
+
+    </td><td>
+    <div class="profile-field">
+      <label for="username">Name:</label>
+      <p-inplace closable="closable">
+        <ng-template pTemplate="display">
+          <span>{{ user.name }}</span>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <input pInputText [(ngModel)]="user.name" />
+        </ng-template>
+      </p-inplace>
+    </div>
+    
+    <div class="profile-field">
+      <label for="email">Email:</label>
+      <p-inplace closable="closable">
+        <ng-template pTemplate="display">
+          <span>{{ user.email }}</span>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <input pInputText [(ngModel)]="user.email" />
+        </ng-template>
+      </p-inplace>
+    </div>
+    
+    <div class="profile-field">
+      <label for="phone">Phone:</label>
+      <p-inplace closable="closable">
+        <ng-template pTemplate="display">
+          <span>{{ user.phone }}</span>
+        </ng-template>
+        <ng-template pTemplate="content">
+          <input pInputText [(ngModel)]="user.phone" />
+        </ng-template>
+      </p-inplace>
+    </div>
+  </td>
+  </tr>
+  </table>
+</section>
+  <section class="section-1">
+
+
+    
+  
+
+   
+    
+    <div class="section-1-content"><h2>Toddler Details</h2>
+   
+<label for="Age">Age : </label>
+      <p-dropdown 
+      [options]="ageInMonths" 
+      [(ngModel)]="selectedAge" 
+      placeholder="Select Age" 
+      [editable]="true" 
+      optionLabel="age"
+      [style]="{'width':'50px'}">
+  </p-dropdown>
+
+  <label for="Weight">Weight : </label>
+  <p-inplace closable="closable">
+    <ng-template pTemplate="display">
+      <span>dddd</span>
+    </ng-template>
+</p-inplace>
+<label for="Height">Height : </label>
+<p-inplace closable="closable">
+  <ng-template pTemplate="display">
+    <span>dddd</span>
+  </ng-template>
+</p-inplace>
+<div>  <label for="Active level">Active Level : </label>  <p-radioButton name="status" value="Low" label="Low" [(ngModel)]="status"></p-radioButton>
+  <p-radioButton name="status" value="Moderate" label="Moderate" [(ngModel)]="status" checked="true"></p-radioButton>
+  <p-radioButton name="status" value="High" label="High" [(ngModel)]="status"></p-radioButton></div>
+</div>
+
+  </section>
+<section class="section-1-content">
+<table><tr>
+  <td colspan="3">
+    <p-multiSelect [options]="dislikes" [(ngModel)]="selectedDislikes" placeholder="Dislikes"></p-multiSelect>
+  </td>
+</tr>
+<tr>
+  <td colspan="3">
+    <p-multiSelect [options]="allergens" [(ngModel)]="selectedAllergens" placeholder="Allergen Preferences"></p-multiSelect>
+  </td>
+</tr>
+</table>
+<p-button label="Save" [raised]="true" />
+<p-button label="Cancel" [raised]="true" />
+
+
+</section>
+</main>
+
+
+<footer class="app-footer">
+Footer Content
+</footer> -->
+
+
+
+
+<!-- <p-button label="Submit" />
+
+<div class="profile-container">
+    <table>
+      <tr>
+        <td rowspan="2">
+          <p-card header="Profile Picture">
+            <div class="profile-picture"></div>
+          </p-card>
+        </td>
+        <td colspan="2">
+          <p-inputText placeholder="Name" [(ngModel)]="name"></p-inputText>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p-inputNumber placeholder="Age" [(ngModel)]="age"></p-inputNumber>
+        </td>
+        <td>
+          <p-inputNumber placeholder="Height" [(ngModel)]="height"></p-inputNumber>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p-inputNumber placeholder="Weight" [(ngModel)]="weight"></p-inputNumber>
+        </td>
+        <td>
+          <p-radioButton name="status" value="Low" label="Low" [(ngModel)]="status"></p-radioButton>
+          <p-radioButton name="status" value="Moderate" label="Moderate" [(ngModel)]="status" checked="true"></p-radioButton>
+          <p-radioButton name="status" value="High" label="High" [(ngModel)]="status"></p-radioButton>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <form>
+            <div class="profile-field">
+              <label for="dietary-preferences">Dietary Preferences:</label>
+              
+            </div>
+          </form>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <p-multiSelect [options]="dislikes" [(ngModel)]="selectedDislikes" placeholder="Dislikes"></p-multiSelect>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <p-multiSelect [options]="allergens" [(ngModel)]="selectedAllergens" placeholder="Allergen Preferences"></p-multiSelect>
+        </td>
+      </tr>
+    </table>
+  </div>
+   -->
+

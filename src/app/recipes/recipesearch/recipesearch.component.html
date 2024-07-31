@@ -1,0 +1,95 @@
+<body>
+    <div class="screentitle">Recipes</div>
+    <div class="search-container">
+        <input type="text" placeholder="Search by name">
+        <input type="text" placeholder="Search by ingredient">
+        
+        <select>
+            <option value="">Sort by</option>
+            <option value="lastUpdated">Last Updated Time</option>
+            <option value="rating">Rate</option>
+        </select>
+    </div>
+
+    <div class="filters-container">
+        <div class="filter-item">
+            <img src="/assets/age1-2.jpg" alt="Age 1-2" class="filter-circle">
+            <span>Age 1-2</span>
+        </div>
+        <div class="filter-item">
+            <img src="/assets/age2-3.jpg" alt="Age 2-3" class="filter-circle">
+            <span>Age 2-3</span>
+        </div>
+        <div class="filter-item">
+            <img src="/assets/gluten-free.jpg" alt="Gluten Free" class="filter-circle">
+            <span>Gluten Free</span>
+        </div>
+        <div class="filter-item">
+            <img src="/assets/egg-free.jpg" alt="Egg Free" class="filter-circle">
+            <span>Egg Free</span>
+        </div>
+    </div>
+
+    <div class="recipes-container">
+        <div class="recipe-card">
+            <h2>Apple Pie</h2>
+            <p>Rating: 4.5</p>
+            <p>Calories: 250 kcal</p>
+            <button>
+                <span>♡</span>
+            </button>
+            <div class="actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+        <div class="recipe-card">
+            <h2>Banana Bread</h2>
+            <p>Rating: 4.8</p>
+            <p>Calories: 300 kcal</p>
+            <button>
+                <span>❤️</span>
+            </button>
+            <div class="actions">
+                <button class="edit-btn">Edit</button>
+                <button class="delete-btn">Delete</button>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- <div class="search-container">
+    <input type="text" placeholder="Search by name" [(ngModel)]="searchName" (input)="searchRecipes()">
+    <input type="text" placeholder="Search by ingredient" [(ngModel)]="searchIngredient" (input)="searchRecipes()">
+    
+    <select [(ngModel)]="sortOption" (change)="sortRecipes()">
+      <option value="">Sort by</option>
+      <option value="lastUpdated">Last Updated Time</option>
+      <option value="rating">Rate</option>
+    </select>
+  </div>
+  
+  <div class="filters-container">
+    <div class="filter-item" *ngFor="let filter of ['Age 1-2', 'Age 2-3', 'Gluten Free', 'Egg Free']">
+      <img src="/assets/{{filter}}.jpg" alt="{{filter}}" class="filter-circle">
+      <span>{{filter}}</span>
+    </div>
+  </div>
+  
+  <div class="recipes-container">
+    <div class="recipe-card" *ngFor="let recipe of filteredRecipes">
+      <h2>{{ recipe.name }}</h2>
+      <p>Rating: {{ recipe.rating }}</p>
+      <p>Calories: {{ recipe.calories }} kcal</p>
+      <button (click)="toggleFavorite(recipe)">
+        <span *ngIf="recipe.isFavorite">❤️</span>
+        <span *ngIf="!recipe.isFavorite">♡</span>
+      </button>
+      <div class="actions">
+        <button class="edit-btn">Edit</button>
+        <button class="delete-btn" (click)="deleteRecipe(recipe)">Delete</button>
+      </div>
+    </div>
+  </div>
+   -->

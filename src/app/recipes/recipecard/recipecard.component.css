@@ -1,0 +1,11 @@
+.recipe-card {
+    display: flex;
+    max-width: 242px;
+    flex-direction: column;
+    color: #000;
+    font-weight: 400;
+    justify-content: center;
+  }
+  
+  .recipe-container {
+    border-radius: 10px;}

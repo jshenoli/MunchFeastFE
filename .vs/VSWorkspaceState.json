@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\layout",
+    "\\src\\app\\layout\\sharedlayout",
+    "\\src\\app\\shared"
+  ],
+  "SelectedNode": "\\src\\app\\layout\\sharedlayout\\sharedlayout.component.html",
+  "PreviewInSolutionExplorer": false
+}

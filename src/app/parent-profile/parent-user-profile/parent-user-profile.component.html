@@ -1,0 +1,218 @@
+
+    <main class="app-content">
+      <section class="welcome-content"> 
+         <p-fieldset legend="User Profile">
+            <div class="p-fluid">
+                <div class="p-field">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="profile-picture">Profile Picture:</label>
+                                <img src="./parentprofile.png" width="100px">
+                                <!-- Add your profile picture upload or display logic here -->
+                            </td>
+                            <td>
+                                <div class="profile-field">
+                                    <label for="username">Name:</label>
+                                    <p-inplace closable="true">
+                                        <ng-template pTemplate="display">
+                                            <span>{{ user.name }}</span>
+                                        </ng-template>
+                                        <ng-template pTemplate="content">
+                                            <input pInputText [(ngModel)]="user.name" name="name" />
+                                        </ng-template>
+                                    </p-inplace>
+                                </div>
+
+                                <div class="profile-field">
+                                    <label for="email">Email:</label>
+                                    <p-inplace closable="true">
+                                        <ng-template pTemplate="display">
+                                            <span>{{ user.email }}</span>
+                                        </ng-template>
+                                        <ng-template pTemplate="content">
+                                            <input pInputText [(ngModel)]="user.email" name="email" />
+                                        </ng-template>
+                                    </p-inplace>
+                                </div>
+
+                                <div class="profile-field">
+                                    <label for="phone">Phone:</label>
+                                    <p-inplace closable="true">
+                                        <ng-template pTemplate="display">
+                                            <span>{{ user.phone }}</span>
+                                        </ng-template>
+                                        <ng-template pTemplate="content">
+                                            <input pInputText [(ngModel)]="user.phone" name="phone" />
+                                        </ng-template>
+                                    </p-inplace>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </p-fieldset>
+     
+        <!-- <table><tr><td>
+          <label for="profile-picture">Profile Picture:</label>
+         
+
+        </td><td>
+        <div class="profile-field">
+          <label for="username">Name:</label>
+          <p-inplace closable="closable">
+            <ng-template pTemplate="display">
+              <span>{{ user.name }}</span>
+            </ng-template>
+            <ng-template pTemplate="content">
+              <input pInputText [(ngModel)]="user.name" />
+            </ng-template>
+          </p-inplace>
+        </div>
+        
+        <div class="profile-field">
+          <label for="email">Email:</label>
+          <p-inplace closable="closable">
+            <ng-template pTemplate="display">
+              <span>{{ user.email }}</span>
+            </ng-template>
+            <ng-template pTemplate="content">
+              <input pInputText [(ngModel)]="user.email" />
+            </ng-template>
+          </p-inplace>
+        </div>
+        
+        <div class="profile-field">
+          <label for="phone">Phone:</label>
+          <p-inplace closable="closable">
+            <ng-template pTemplate="display">
+              <span>{{ user.phone }}</span>
+            </ng-template>
+            <ng-template pTemplate="content">
+              <input pInputText [(ngModel)]="user.phone" />
+            </ng-template>
+          </p-inplace>
+        </div>
+      </td>
+      </tr>
+      </table> -->
+    </section>
+    <p-fieldset legend="Toddler Cards">
+      <section class="section-1">
+        
+      
+       
+        <p-dialog header="Edit Dietary Preferences" [(visible)]="displayDialog" [modal]="true" [closable]="true" [style]="{width: '300px'}">
+          <app-babydetails></app-babydetails>
+        </p-dialog>
+        <div class="profile-card"> <img src="/addbaby.png" alt="Welcome Image"><br><button (click)="showDialog() ">Add Toddler</button></div>
+        <app-babycard></app-babycard>
+        <!-- <div class="profile-card"> <img src="/addbaby.png" alt="Welcome Image"><br><br><b>Yuven</b> <br> <br> <div class="Details">Age:23mnths &nbsp; &nbsp;  Weight:8kg <br>Last Updated:</div><br><button>Recommendations</button><br><button>Keep uptodate</button></div>
+        <div class="profile-card"> <img src="/addbaby.png" alt="Welcome Image"><br><br><b>Akhel</b><br> <br> <div class="Details"> Age:23mnths  &nbsp; &nbsp;  Weight:8kg<br>Last Updated:</div><br><button>Recommendations</button><br><button>Keep uptodate</button></div> -->
+
+        <div class="section-1-content">Section 1 Content</div>
+      </section>
+      <section class="section-2"><h2>Account Settings</h2>
+        
+        
+
+        <p-button><i class="pi pi-trash"></i>  Delete Account</p-button>
+        Reset Password
+    
+
+<p-dialog header="Edit Profile" [modal]="true" [(visible)]="displayDialog" [style]="{ width: '25rem' }">
+    hi
+</p-dialog>
+      </section>
+    </p-fieldset >
+  <!-- </div> -->
+<!-- 
+  <footer class="app-footer">
+    Footer Content
+  </footer> -->
+
+
+
+
+
+
+<!-- <div class="app-container">
+  <header class="app-header">
+    <div class="logo">
+      <img src="path/to/logo.png" alt="Welcome Image">
+    </div>
+    <div class="profile-bar"><img src="/profile 4249.png" alt="Welcome Image"><img src="/profile 4249.png" alt="Welcome Image"></div>
+  </header>
+  <div class="app-main">
+    <aside class="app-sidebar">
+      <div class="sidebar-top-section">
+        <img src="/toddler.png" alt="Welcome Image" class="welcometoddler-image">
+      </div>
+      <nav class="sidebar-menu">
+        <ul>
+          <li><a href="#">Overview</a></li>
+          <li>
+            <a href="#" class="dropdown-btn" (click)="toggleDropdown('history')">History</a>
+            <ul class="dropdown-container" [ngClass]="{'show': dropdowns['history']}">
+              <li><a href="#">Submenu 1</a></li>
+              <li><a href="#">Submenu 2</a></li>
+              <li><a href="#">Submenu 3</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Updates</a></li>
+          <li>
+            <a href="#" class="dropdown-btn" (click)="toggleDropdown ('account')">Account</a>
+            <ul class="dropdown-container" [ngClass]="{'show': dropdowns['account']}">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Settings</a></li>
+              <li><a href="#">Logout</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="app-content">
+      <section class="welcome-content"> 
+        
+        <table class="profile-table">
+          <tr>
+            <td rowspan="6" class="profile-picture-cell">
+              <img src="/parentuserprofile.jpg" alt="Baby Profile Picture" class="profile-picture">
+            </td>
+            <td class="profile-detail"><strong>Name:</strong></td>
+          </tr>
+          <tr>
+            <td class="profile-detail"><strong>E-mail</strong>1 </td>
+          </tr>
+          <tr>
+            <td class="profile-detail"><strong>Gender:</strong></td>
+          </tr>
+          
+        </table>
+
+    </section>
+      <section class="section-1">
+        
+        <div class="profile-card"> <img src="/addbaby.png" alt="Welcome Image"><br><button >Add Toddler</button></div>
+        <div class="profile-card"> <img src="/addbaby.png" alt="Welcome Image"><br><br><b>Yuven</b> <br> <br> <div class="Details">Age:23mnths &nbsp; &nbsp;  Weight:8kg <br>Last Updated:</div><br><button>Recommendations</button><br><button>Keep uptodate</button></div>
+        <div class="profile-card"> <img src="/addbaby.png" alt="Welcome Image"><br><br><b>Akhel</b><br> <br> <div class="Details"> Age:23mnths  &nbsp; &nbsp;  Weight:8kg<br>Last Updated:</div><br><button>Recommendations</button><br><button>Keep uptodate</button></div>
+
+        <div class="section-1-content">Section 1 Content</div>
+      </section>
+      <section class="section-2"><h3>Account Settings</h3>
+        Delete Account
+        Reset Password
+
+        
+      </section>
+    </main>
+  </div>
+
+  <footer class="app-footer">
+    Footer Content
+  </footer>
+</div>
+ -->
+
+

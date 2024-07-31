@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Combo&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Combo&family=Comfortaa:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@400;500;600;700&display=swap');
+
+ @import "primeng/resources/themes/saga-orange/theme.css"; 
+ @import "primeicons/primeicons.css";
+
+
+
+@import "primeng/resources/primeng.css";
+
+body {
+    font-family: 1px poppins, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+
+    background-color: #4a9579;
+    color: white;
+    padding: 1rem 0;
+    
+}
+
+.pi {
+    margin-right: 0.5rem; /* Adjust the margin as needed */
+    margin-top: 1rem; /* Adjust the margin as needed */
+}
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #4a9579;
+    height: 60px;
+    
+}
+
+.logo h1 {
+    margin: 0;
+    color: #f0f0f0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background 0.3s;
+
+    font: 400 18px/150% Cabin Condensed, -apple-system, Roboto, Helvetica,
+      sans-serif;
+}
+
+nav ul li a:hover,
+nav ul li a.btn {
+    display: inline-block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1rem 0;
+    background-color: #e3a23f;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.title{
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    position: fixed;
+    max-height: 60px;
+    background-color: #81c1c0; 
+    width: 100%; /* Ensure the title takes the full width of the parent container */
+    box-sizing: border-box; /* Inc  lude padding and border in the element's total width and height */
+    padding: 10px; /* Adjust padding as needed */
+    margin: 0; /* Remove default margins */
+    margin-bottom: 100px;
+   
+}
+
+.icon{
+max-width: 50px;
+max-height: 50px;
+border: none;
+
+}
+
+.icon:hover{
+    max-width: 80px;
+    max-height: 80px;
+    border: none;
+    
+    }
+
+    .sidebar-footer {
+        padding: 1rem;
+        text-align: center;
+        border-top: 1px solid #ccc;
+        border-color: none;
+        margin-top: auto;
+    }
+    
+    .sidebar-footer i {
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+.btnsignup {
+    display: inline-block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1rem 0;
+    background-color: #e3a23f;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.btnlogin {
+    display: inline-block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1rem 0;
+    background-color: #E7F39E;
+    color: rgb(84, 80, 80);
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px; /* Add space between buttons */
+
+}
+.buttonorange{
+  
+    display: inline-block;
+   margin: 0.4rem 0;
+   background: linear-gradient(0deg, #e58025 0%, #e58025 100%), #893027;
+   color: white;
+   padding: 0.5rem 1rem;
+   text-decoration: none;
+   border-radius: 10px; 
+   font-weight: 600;
+   text-align: center;
+   border:none;
+ 
+ }
+ .buttonorange:hover{
+  
+    display: inline-block;
+   margin: 0.4rem 0;
+   background: linear-gradient(0deg, #d9a271 0%, #d5955d 100%), #954b43;
+   color: white;
+   padding: 0.5rem 1rem;
+   text-decoration: none;
+   border-radius: 10px; 
+   font-weight: 600;
+   text-align: center;
+   border:none;
+ 
+ }
+.logo img {
+    height: 50px;}
+.btnlogin:hover{ display: inline-block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1rem 0;
+    background-color: #c7b8a1;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-right: 9px; /* Add space between buttons */}
+
+    .btnsignup:hover{ display: inline-block;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        margin: 1rem 0;
+        background-color: #dcac64;
+        color: white;
+        padding: 0.5rem 1rem;
+        text-decoration: none;
+        border-radius: 5px;
+        margin-right: 20px; /* Add space between buttons */}
+
+.welcome-section {
+    background-color: #f0f0f0;
+    padding: 2rem 0;
+        box-shadow: 0px 0px 45px 0px #e1c2a8;
+        border-color: rgba(249, 244, 237, 1);
+        border-style: solid;
+        border-width: 10px;
+        background-color: #fff;
+        padding-left: 7px;
+}
+
+.welcome-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.welcome-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.welcome-text {
+    max-width: 45%;
+    text-align: left;
+}
+
+.welcome-text h2 {
+    color: #4a9579;
+    text-align: center;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    letter-spacing: -0.5px;
+    max-width: 637px;
+    font: 400 50px/150% Combo, sans-serif;
+
+}
+
+.welcome-text .btn {
+    display: inline-block;
+    margin: 1rem 0;
+    background-color: #ffa500;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.welcome-text p {
+    color: #2b0808;
+    max-width: 718px;
+    font: 400 22px/31px Combo, sans-serif;
+    text-align: center;
+}
+
+.welcome-text label {
+    color: #3d3c3c;
+   
+    font: 400 12px/31px poppins, sans-serif;
+    text-align: left;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input {
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+
+
+}
+.login-form input:focus {
+        height: 45px;
+        background-color: #e8cc6f;
+        border-color: #e3a23f;
+        border: #008080;
+        
+    
+
+
+}
+
+.login-form input :selection {
+    
+    border: 1px solid #ccc;
+    border-color: #4a9579;
+
+}
+
+
+.form-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.form-options label {
+    display: flex;
+    align-items:flex-start;
+    color: #333;
+}
+
+.form-options a {
+    color: #008080;
+    text-decoration: none;
+}
+
+.info-section {
+    background-color: #4a9579;
+    color: white;
+    padding: 2rem 0;
+}
+
+.info-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.info-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.info-text {
+    max-width: 45%;
+    text-align: left;
+}
+
+.info-text p {
+    color: #fff;
+    max-width: 718px;
+    font: 400 22px/31px Combo, sans-serif;
+}
+
+
+
+.info-text h2 {
+    font-size: 2rem;
+    color: #fff;
+    max-width: 700px;
+    font: 400 50px/140% Combo, sans-serif;
+}
+
+.info-text .btn {
+    display: inline-block;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 1rem 0;
+    background-color: #e3a23f;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font: 100 18px/150% Cabin Condensed, -apple-system, Roboto, Helvetica,
+      sans-serif;
+
+   
+}
+
+footer {
+    background-color: #f0f0f0;
+    color: #333;
+    padding: 1rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.footer-info {
+    text-align: left;
+}
+
+.footer-nav a {
+    color: #008080;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+
+.screentitle{
+    background-color: #4a9579;
+    height: 50px;
+}

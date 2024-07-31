@@ -1,0 +1,133 @@
+<div class="app-container">
+  <header class="app-header">
+    <div class="logo">
+      <img src="/Logo1.png" alt="Welcome Image">
+      
+    </div>
+    <div class="profile-bar">
+
+      <i class="pi pi-home"></i>  &nbsp; &nbsp; 
+      <i class="pi pi-cog"></i>
+      
+    </div>
+  </header>
+  <div class="sidebar" [ngClass]="{'sidebar-visible': sidebarVisible}">
+    <div class="sidebar-header">
+      <div class="profile">
+        <img src="/profile 4249.png" alt="Profile Picture" class="profile-pic" />
+        <span class="greeting">Hello, {{userName}}!</span>
+      </div>
+      <button class="close-btn" (click)="closeSidebar()">✖</button>
+    </div>
+    <div class="sidebar-content">
+      <div class="menu-item"> 
+        <a routerLink="./" style="text-decoration: none; color: inherit; cursor: pointer;"><i class="pi pi-home"></i>     Dashboard</a>
+    </div>
+    <div class="menu-item">
+      <a routerLink="./parentuserprofile" style="text-decoration: none; color: inherit; cursor: pointer;"><i class="pi pi-user"></i>   Profile</a>
+  </div>
+  <div class="menu-item">
+    <a routerLink="./recipesearch" style="text-decoration: none; color: inherit; cursor: pointer;"><i class="pi pi-book"></i>   Recipes</a>
+</div>
+<div class="menu-item">
+  <a routerLink="./parentuserprofile" style="text-decoration: none; color: inherit; cursor: pointer;"><i class="pi pi-thumbs-up"></i>   Recommendations</a>
+</div>
+<div class="menu-item">
+  <a routerLink="./parentuserprofile" style="text-decoration: none; color: inherit; cursor: pointer;"><i class="pi pi-heart
+    "></i>   Munchbox</a>
+</div>
+<div class="menu-item">
+  <a routerLink="./parentuserprofile" style="text-decoration: none; color: inherit; cursor: pointer;"><i class="pi pi-shopping-cart"></i>   Vendors</a>
+</div>
+      <!-- <div class="menu-item" (click)="toggleSection('favorites')">
+        <span>Recommendations</span>
+        <span class="chevron" [ngClass]="{'rotate': activeSection === 'favorites'}">▼</span>
+      </div>
+      <ul [ngClass]="{'hidden': activeSection !== 'favorites'}">
+        <li class="menu-subitem"><a routerLink="./parentboard"></a>Munchboard</li>
+        <li class="menu-subitem">Bookmarks</li>
+        <li class="menu-subitem" (click)="toggleSubsection('reports')">
+          Reports
+          <span class="chevron" [ngClass]="{'rotate': activeSubsection === 'reports'}">▼</span>
+        </li>
+        <ul [ngClass]="{'hidden': activeSubsection !== 'reports'}">
+          <li class="menu-subitem">Revenue</li>
+          <li class="menu-subitem">Expenses</li>
+        </ul>
+      </ul> -->
+      <!-- <div class="menu-item" (click)="toggleSection('application')">
+        <span>Vendors</span>
+        <span class="chevron" [ngClass]="{'rotate': activeSection === 'application'}">▼</span>
+      </div>
+      <ul [ngClass]="{'hidden': activeSection !== 'application'}">
+        <li class="menu-subitem">Projects</li>
+        <li class="menu-subitem">Performance</li>
+        <li class="menu-subitem">Settings</li>
+      </ul> -->
+    </div>
+    <p-sidebar [(visible)]="visibledownSidebar" position="right" >
+      <h1 style="font-weight:normal">
+        <div class="contact-form">
+          <h2>Contact Us</h2>
+          <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+            <!-- Feedback Type Selection -->
+            <div class="form-group">
+              <label for="feedbackType">Feedback Type:</label>
+              <select id="feedbackType" [(ngModel)]="contact.feedbackType" name="feedbackType" required>
+                <option value="" disabled selected>Select Feedback Type</option>
+                <option value="question">Question</option>
+                <option value="comment">Comment</option>
+                <option value="suggestion">Suggestion</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+    
+            <!-- Message Field -->
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" [(ngModel)]="contact.message" name="message" required></textarea>
+            </div>
+    
+            <!-- Common Fields -->
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" [(ngModel)]="contact.name" name="name" required>
+            </div>
+    
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" [(ngModel)]="contact.email" name="email" required>
+            </div>
+    
+            <!-- Additional Fields Based on Feedback Type -->
+            <div *ngIf="contact.feedbackType === 'other'">
+              <div class="form-group">
+                <label for="additionalInfo">Additional Information:</label>
+                <textarea id="additionalInfo" [(ngModel)]="contact.additionalInfo" name="additionalInfo"></textarea>
+              </div>
+            </div>
+    
+            <button type="submit" [disabled]="!contactForm.form.valid">Submit</button>
+          </form>
+        </div>
+
+      </h1>
+      <button type="button" pButton icon="pi pi-check" label="Save"></button>
+    </p-sidebar>
+  <div class="sidebar-footer">
+    <button (click)="visibledownSidebar = true" class="icon" >    
+      <img src="./mail.jpg" alt="Icon" class="icon">
+</button></div>
+</div>
+
+  <button class="open-btn" (click)="openSidebar()">☰</button>
+  <div class="app-main">
+    
+    <main class="app-content" [ngClass]="{'sidebar-open': sidebarVisible}">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <footer class="app-footer">
+    Footer Content
+  </footer>
+</div>
